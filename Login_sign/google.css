@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.container img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.container input[type="text"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.container .forgot-email{
+    margin: 10px ;
+}
+.container .guest-mode {
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+.container .create-account {
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+}
+.container .next-button {
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.container .next-button:hover {
+    background-color: #1558b0;
+}
+.footer {
+    font-size: 14px;
+    color: #666;
+    margin-bottom:-50 px;
+}
+.footer a {
+    color: #1a73e8;
+    text-decoration: none;
+    margin: 0 5px;
+}

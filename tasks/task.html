@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dashboard
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Logo" class="h-10 w-10" height="50"
+                    src="/Images/logo.jpg"
+                    width="50" style="border-radius: 15px;"/>
+                <ul class="flex space-x-4 ml-4">
+                    <li>
+                        <a class="text-black font-semibold" href="/index.html">
+                           Home
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600" href="/tasks/task.html">
+                            Tasks
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600" href="/calender/calendar.html">
+                            Calendar
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600" href="/Login_sign/about.html">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600" href="/Login_sign/contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center">
+                <a href="/notification/notification.html"><i class="fas fa-bell text-gray-600 mr-4"></i></a>
+                <div class="flex items-center">
+                    <img alt="User Avatar" class="h-10 w-10 rounded-full" height="40"
+                        src="/Images/ashutosh.jpg"
+                        width="40" />
+                    <div class="ml-2">
+                        <p class="text-black font-semibold">
+                            Ashutosh
+                        </p>
+                        <p class="text-gray-600 text-sm">
+                            <p id="date"> </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-6">
+        <!-- Task Buttons -->
+        <div class="flex justify-center space-x-4 mb-6">
+            <button class="bg-black text-white px-4 py-2 rounded">
+                <a href="/tasks/task.html">Task for User</a>
+            </button>
+            <button class="bg-gray-200 text-black px-4 py-2 rounded">
+                <a href="/tasks/teamtask.html">Task for Team</a>
+            </button>
+        </div>
+        <!-- Task Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-600">
+                    Total Tasks
+                </p>
+                <p class="text-2xl font-bold">
+                    24
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-600">
+                    Completed
+                </p>
+                <p class="text-2xl font-bold text-green-500">
+                    16
+                </p>
+                <p class="text-green-500">
+                    66%
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-600">
+                    Pending
+                </p>
+                <p class="text-2xl font-bold text-yellow-500">
+                    8
+                </p>
+                <p class="text-yellow-500">
+                    34%
+                </p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <p class="text-gray-600">
+                    Due Today
+                </p>
+                <p class="text-2xl font-bold text-red-500">
+                    5
+                </p>
+            </div>
+        </div>
+        <!-- Task Lists -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow">
+                <p class="font-semibold mb-2">
+                    High Priority
+                </p>
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Complete project proposal
+                        <span class="text-gray-500">
+                            Due in 2 hours
+                        </span>
+                    </p>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Client meeting preparation
+                        <span class="text-gray-500">
+                            Due today at 2 PM
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <p class="font-semibold mb-2">
+                    Medium Priority
+                </p>
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Review team reports
+                        <span class="text-gray-500">
+                            Due tomorrow
+                        </span>
+                    </p>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Update documentation
+                        <span class="text-gray-500">
+                            Due in 2 days
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <p class="font-semibold mb-2">
+                    Low Priority
+                </p>
+                <div class="flex items-center mb-2">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Organize team building
+                        <span class="text-gray-500">
+                            Due next week
+                        </span>
+                    </p>
+                </div>
+                <div class="flex items-center">
+                    <input class="mr-2" type="checkbox" />
+                    <p>
+                        Office supplies inventory
+                        <span class="text-gray-500">
+                            Due in 5 days
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Today's Schedule -->
+        <div class="bg-white p-4 rounded shadow mb-6">
+            <p class="font-semibold mb-4">
+                Today's Schedule
+            </p>
+            <div class="flex items-center mb-2">
+                <p class="w-24">
+                    9:00 AM
+                </p>
+                <p class="font-semibold">
+                    Team standup meeting
+                </p>
+                <p class="text-gray-500 ml-2">
+                    Daily scrum with development team
+                </p>
+            </div>
+            <div class="flex items-center mb-2">
+                <p class="w-24">
+                    11:00 AM
+                </p>
+                <p class="font-semibold">
+                    Client presentation
+                </p>
+                <p class="text-gray-500 ml-2">
+                    Project progress review with stakeholders
+                </p>
+            </div>
+            <div class="flex items-center">
+                <p class="w-24">
+                    2:00 PM
+                </p>
+                <p class="font-semibold">
+                    Design review
+                </p>
+                <p class="text-gray-500 ml-2">
+                    Review new feature designs with UX team
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-white py-6 mt-6">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img alt="Logo" class="h-10 w-10" height="50"
+                    src="/Images/logo.jpg"
+                    width="50" style="border-radius: 15px;"/>
+                <p class="ml-2 text-gray-600">
+                    Making task management simple and efficient for teams worldwide.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row md:space-x-8 mb-4 md:mb-0">
+                <div class="flex flex-col">
+                    <p class="font-semibold mb-2">
+                        Quick Links
+                    </p>
+                    <a class="text-gray-600" href="#">
+                        About Us
+                    </a>
+                    <a class="text-gray-600" href="#">
+                        Help Center
+                    </a>
+                    <a class="text-gray-600" href="#">
+                        Terms of Service
+                    </a>
+                    <a class="text-gray-600" href="#">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="flex flex-col">
+                    <p class="font-semibold mb-2">
+                        Contact Us
+                    </p>
+                    <p class="text-gray-600">
+                        ashutoshupdhyay2062@gmail.com
+                    </p>
+                    <p class="text-gray-600">
+                       +91 8602141267
+                    </p>
+                    <p class="text-gray-600">
+                        124 Indra Tower , AB Road
+                        <br>
+                        New Delhi Indore
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <p class="font-semibold mb-2">
+                    Newsletter
+                </p>
+                <input class="p-2 border border-gray-300 rounded mb-2" placeholder="Enter your email" type="email" />
+                <button class="bg-black text-white px-4 py-2 rounded">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-4 text-center text-gray-600">
+            <p>
+                © 2025 To-Do. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function updateDate() {
+            const dateElement = document.getElementById('date');
+
+            const currentDate = new Date();
+
+            // Get current date (formatted: Day, Month Date, Year)
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+            // Display the date
+            dateElement.innerHTML = formattedDate;
+        }
+
+        // Update the date every second
+        setInterval(updateDate, 1000);
+
+        // Call the function once to initialize
+        updateDate();
+    </script>
+</body>
+
+</html>

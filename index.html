@@ -1,0 +1,216 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        To-Do
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between p-6">
+        <div class="flex items-center space-x-4">
+            <img alt="Logo" class="h-10" height="40"
+                src="/Images/logo.jpg"
+                width="40" style="border-radius: 15px;"/>
+            <a class="text-lg font-semibold" href="index.html" style="background-color: whitesmoke;">
+                Home
+            </a>
+            <a class="text-lg" href="/tasks/task.html">
+                Tasks
+            </a>
+            <a class="text-lg" href="/calender/calendar.html">
+                Calender
+            </a>
+            <a class="text-lg" href="/Login_sign/about.html">
+                About
+            </a>
+            <a class="text-lg" href="/Login_sign/contact.html">
+                Contact
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="/notification/notification.html"><i class="fas fa-bell text-xl"></i></a>
+            <button class="px-4 py-2 bg-black text-white rounded">
+               <a href="/Login_sign/signup.html">Sign Up</a>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center justify-between p-12">
+        <div class="md:w-1/2 space-y-6">
+            <h1 class="text-4xl font-bold">
+                Enhance Your Productivity with AI
+            </h1>
+            <p class="text-lg text-gray-600">
+                Experience a new way of managing tasks with AI-powered insights and recommendations.
+            </p>
+            <div class="space-x-4">
+                <button class="px-6 py-2 bg-black text-white rounded">
+                    Get Started
+                </button>
+                <button class="px-6 py-2 border border-black rounded">
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0">
+            <img alt="AI Productivity Illustration" class="rounded-lg" height="400"
+                src="https://storage.googleapis.com/a1aa/image/8Fd7ozMwB4xW7BIBkono3a0zWOFGykC6x3w0DJ9ij8c.jpg"
+                width="600" />
+        </div>
+    </section>
+    <!-- Dashboard Section -->
+    <section class="p-12">
+        <h2 class="text-2xl font-bold text-center">
+            Task Management Dashboard
+        </h2>
+        <p class="text-center text-gray-600">
+            Track your progress and get AI-powered insights
+        </p>
+        <div class="flex flex-col md:flex-row justify-between mt-8 space-y-8 md:space-y-0 md:space-x-8">
+            <!-- Current Tasks -->
+            <div class="md:w-1/3 p-6 border rounded-lg">
+                <h3 class="text-xl font-semibold">
+                    Current Tasks
+                </h3>
+                <ul class="mt-4 space-y-4">
+                    <li class="flex items-center">
+                        <input class="mr-2" type="checkbox" />
+                        <span>
+                            Update project documentation
+                        </span>
+                    </li>
+                    <li class="flex items-center">
+                        <input class="mr-2" type="checkbox" />
+                        <span>
+                            Review team submissions
+                        </span>
+                    </li>
+                    <li class="flex items-center">
+                        <input class="mr-2" type="checkbox" />
+                        <span>
+                            Schedule weekly meeting
+                        </span>
+                    </li>
+                </ul>
+                <div class="mt-4 text-blue-600">
+                    5 Active
+                </div>
+            </div>
+            <!-- Progress Overview -->
+            <div class="md:w-1/3 p-6 border rounded-lg">
+                <h3 class="text-xl font-semibold">
+                    Progress Overview
+                </h3>
+                <img alt="Progress Chart" class="mt-4" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/SIEJxe3vonlSWfnY_EYfnqhLZSzXwHiemTQtnRKlzh4.jpg"
+                    width="300" />
+            </div>
+            <!-- AI Insights -->
+            <div class="md:w-1/3 p-6 border rounded-lg">
+                <h3 class="text-xl font-semibold">
+                    AI Insights
+                </h3>
+                <ul class="mt-4 space-y-4">
+                    <li class="flex items-center">
+                        <span class="text-yellow-500 mr-2">
+                            •
+                        </span>
+                        <span>
+                            Your productivity peaks between 9 AM and 11 AM. Schedule important tasks during this time.
+                        </span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-green-500 mr-2">
+                            •
+                        </span>
+                        <span>
+                            You've completed 23% more tasks this week compared to last week.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-12">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="md:w-1/3 space-y-4">
+                <img alt="Logo" class="h-10" height="40"
+                    src="/Images/logo.jpg"
+                    width="40" style="border-radius: 15px;"/>
+                <p>
+                    Empowering your productivity with AI-driven insights and seamless task management.
+                </p>
+            </div>
+            <div class="md:w-1/3 space-y-4">
+                <h3 class="text-lg font-semibold">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a class="hover:underline" href="/index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="/Login_sign/about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:underline" href="/Login_sign/contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:w-1/3 space-y-4">
+                <h3 class="text-lg font-semibold">
+                    Contact Us
+                </h3>
+                <p>
+                    <a href="mailto:ashutoshupdhyay2062@gmail.com">ashutoshupdhyay2062@gmail.com</a>
+                    <br />
+                    +91 86021 41267
+                    <br />
+                    124 Indra Tower , AB Road
+                    <br>
+                    New Delhi Indore
+                    
+                </p>
+                <div class="flex space-x-4">
+                    <a class="hover:text-gray-400" href="https://x.com/ashutosh_0205">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a class="hover:text-gray-400" href="#">
+                        <i class="fab fa-facebook">
+                        </i>
+                    </a>
+                    <a class="hover:text-gray-400" href="https">
+                        <i class="fab fa-linkedin">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500">
+            © 2025 To-Do. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Task Management
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Logo" class="h-10 w-10" height="40"
+                    src="/Images/logo.jpg"
+                    width="40" style="border-radius: 15px;"/>
+                <nav class="ml-10 space-x-4">
+                    <a class="text-gray-600 hover:text-gray-900" href="/index.html">
+                        Home
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="/tasks/task.html">
+                        Tasks
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="/calender/calendar.html">
+                        Calendar
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        About
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        Contact
+                    </a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <img alt="User Avatar" class="h-10 w-10 rounded-full" height="40"
+                        src="/Images/ashutosh.jpg"
+                        width="40" />
+                    <span>
+                        Ashutosh
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-6">
+            Task Management
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">
+                    Team Performance
+                </h2>
+                <img alt="Team Performance Chart" class="w-full" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/oiYx0w8eHUy1IO-DLxDEWYvRxkyw4DmMgC3ExhD3VM4.jpg"
+                    width="300" />
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">
+                    Task Status
+                </h2>
+                <img alt="Task Status Chart" class="w-full" height="200"
+                    src="https://storage.googleapis.com/a1aa/image/xPgqqeW-pVQaO-fqgbiPSc_o7pCNQ1dAK6oULmTejJg.jpg"
+                    width="300" />
+            </div>
+            <div class="bg-white p-6 rounded shadow">
+                <h2 class="text-lg font-semibold mb-4">
+                    Top Performers
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Sarah Johnson" class="h-10 w-10 rounded-full" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/OQzxzD_RBZuFllDMY8-hmYv127UEM1VQ0K868zhQ_ZY.jpg"
+                                width="40" />
+                            <span>
+                                Sarah Johnson
+                            </span>
+                        </div>
+                        <span>
+                            92%
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Michael Chen" class="h-10 w-10 rounded-full" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/JVKIHEYDWUlZD4HEByHZr0JzEVB-aZTX8VjiM_TQNGI.jpg"
+                                width="40" />
+                            <span>
+                                Michael Chen
+                            </span>
+                        </div>
+                        <span>
+                            85%
+                        </span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Emma Rodriguez" class="h-10 w-10 rounded-full" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/G99vUQIrKldcbPHlb68k0l6BGxJXlTYjcUeMp2YH3Rw.jpg"
+                                width="40" />
+                            <span>
+                                Emma Rodriguez
+                            </span>
+                        </div>
+                        <span>
+                            78%
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded shadow mb-8">
+            <h2 class="text-lg font-semibold mb-4">
+                Create New Task
+            </h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="assignTo">
+                            Assign To
+                        </label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="assignTo">
+                            <option>
+                                Sarah Johnson
+                            </option>
+                            <option>
+                                Michael Chen
+                            </option>
+                            <option>
+                                Emma Rodriguez
+                            </option>
+                            <option>
+                                David Kim
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="taskTitle">
+                            Task Title
+                        </label>
+                        <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="taskTitle"
+                            placeholder="Enter task title" type="text" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700" for="description">
+                        Description
+                    </label>
+                    <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="description"
+                        placeholder="Enter task description" rows="3"></textarea>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="deadline">
+                            Deadline
+                        </label>
+                        <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="deadline"
+                            type="date" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="priority">
+                            Priority
+                        </label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" id="priority">
+                            <option>
+                                High
+                            </option>
+                            <option>
+                                Medium
+                            </option>
+                            <option>
+                                Low
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <button class="bg-black text-white px-4 py-2 rounded" type="submit">
+                    Create Task
+                </button>
+            </form>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+            <h2 class="text-lg font-semibold mb-4">
+                Active Tasks
+            </h2>
+            <div class="flex justify-between items-center mb-4">
+                <input class="border-gray-300 rounded-md shadow-sm" placeholder="Search tasks..." type="text" />
+                <select class="border-gray-300 rounded-md shadow-sm">
+                    <option>
+                        All Status
+                    </option>
+                    <option>
+                        In Progress
+                    </option>
+                    <option>
+                        Completed
+                    </option>
+                    <option>
+                        Pending
+                    </option>
+                </select>
+            </div>
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Task
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Assigned To
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Deadline
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Priority
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Status
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Progress
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            Website Redesign
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center space-x-2">
+                                <img alt="User 1" class="h-8 w-8 rounded-full" height="40"
+                                    src="/Images/aman.jpg"
+                                    width="40" />
+                                <img alt="User 2" class="h-8 w-8 rounded-full" height="40"
+                                    src="/Images/ashutosh.jpg"
+                                    width="40" />
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            April 15, 2025
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                High
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                In Progress
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-black h-2.5 rounded-full" style="width: 50%">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <a class="text-blue-600 hover:text-blue-900" href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="text-red-600 hover:text-red-900 ml-2" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            Mobile App Development
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center space-x-2">
+                                <img alt="User 1" class="h-8 w-8 rounded-full" height="40"
+                                    src="/Images/ayush.jpg"
+                                    width="40" />
+                                <img alt="User 2" class="h-8 w-8 rounded-full" height="40"
+                                    src="/Images/aman.jpg"
+                                    width="40" />
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            May 30, 2025
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                Medium
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                Planning
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-black h-2.5 rounded-full" style="width: 30%">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <a class="text-blue-600 hover:text-blue-900" href="#">
+                                <i class="fas fa-edit">
+                                </i>
+                            </a>
+                            <a class="text-red-600 hover:text-red-900 ml-2" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="bg-white shadow mt-8">
+        <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <img alt="Logo" class="h-10 w-10 mb-4" height="40"
+                    src="/Images/logo.jpg"
+                    width="40" style="border-radius: 15px;"/>
+                <p>
+                    Empowering teams to achieve more through effective task management and collaboration.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-900" href="#">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-900" href="#">
+                            Help Center
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-900" href="#">
+                            Terms of Service
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-gray-600 hover:text-gray-900" href="#">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">
+                    Contact
+                </h3>
+                <p>
+                    ashutoshupdhyay2062@gmail.com
+                    <br>
+                    +91 86021 41267
+                    <br>
+                    124 Indra Tower , AB Road
+                    <br>
+                    New Delhi Indore
+                </p>
+                <h3 class="text-lg font-semibold mt-4 mb-4">
+                    Newsletter
+                </h3>
+                <form class="flex space-x-2">
+                    <input class="border-gray-300 rounded-md shadow-sm" placeholder="Enter your email" type="email" />
+                    <button class="bg-black text-white px-4 py-2 rounded" type="submit">
+                        Subscribe
+                    </button>
+                </form>
+                <div class="flex space-x-4 mt-4">
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        <i class="fab fa-facebook-f">
+                        </i>
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        <i class="fab fa-linkedin-in">
+                        </i>
+                    </a>
+                    <a class="text-gray-600 hover:text-gray-900" href="#">
+                        <i class="fab fa-instagram">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100 py-4 mt-8">
+            <div class="container mx-auto px-4 text-center text-gray-600">
+                © 2025 To-Do. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

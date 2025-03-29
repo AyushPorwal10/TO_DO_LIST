@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up for TodoList</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.jpg" id="logo">To do list</div>
+        <h1>Sign up for TodoList</h1>
+        <form>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+        <div class="alternative-signup">
+            <p>Or continue with</p>
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+            <button class="apple">Apple</button>
+        </div>
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+
+            const res = await fetch('http://localhost:5000/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email , password })
+            });
+
+            const data = await res.json();
+            document.getElementById('response').textContent = data.message;
+        });
+    </script>
+</body>
+</html>

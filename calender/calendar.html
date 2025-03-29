@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .calendar-day {
+            position: relative;
+        }
+
+        .calendar-day .dot {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img alt="Company Logo" class="h-8 w-8" height="32"
+                            src="/Images/logo.jpg"
+                            width="32" style="border-radius: 15px;"/>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/index.html">Home</a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/tasks/task.html">Task</a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/calender/calendar.html">Calendar</a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/Login_sign/about.html">About</a>
+                            <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                                href="/Login_sign/contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button
+                        class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="sr-only">View notifications</span>
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <div class="ml-3 relative">
+                        <div>
+                            <button aria-expanded="false" aria-haspopup="true"
+                                class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                id="user-menu-button">
+                                <span class="sr-only">Open user menu</span>
+                                <img alt="User Avatar" class="h-8 w-8 rounded-full" height="32"
+                                    src="/Images/ashutosh.jpg"
+                                    width="32" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center space-x-2">
+                        <button id="prev-month" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h2 id="calendar-title" class="text-xl font-semibold text-gray-900"></h2>
+                        <button id="next-month" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button id="today-button" class="bg-black text-white px-4 py-2 rounded-md">Today</button>
+                        <button
+                            class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md">Month</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-7 gap-4 text-center text-gray-500">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div id="calendar-days" class="grid grid-cols-7 gap-4 mt-2 text-center"></div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-2">Status Legend</h3>
+                <ul>
+                    <li class="flex items-center mb-1">
+                        <span class="h-2 w-2 bg-blue-500 rounded-full mr-2"></span>
+                        Assigned by Team Lead
+                    </li>
+                    <li class="flex items-center mb-1">
+                        <span class="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
+                        Completed Tasks
+                    </li>
+                    <li class="flex items-center mb-1">
+                        <span class="h-2 w-2 bg-yellow-500 rounded-full mr-2"></span>
+                        Due in 5 hours
+                    </li>
+                    <li class="flex items-center mb-1">
+                        <span class="h-2 w-2 bg-red-500 rounded-full mr-2"></span>
+                        Overdue Tasks
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-lg font-semibold mb-2">Upcoming Deadlines</h3>
+                <ul>
+                    <li class="mb-1">
+                        <span class="text-red-500">UI Design Review</span> - Due in 4 hours
+                    </li>
+                    <li class="mb-1">
+                        <span class="text-blue-500">Backend Integration</span> - Tomorrow at 2 PM
+                    </li>
+                    <li class="mb-1">
+                        <span class="text-green-500">Client Meeting Notes</span> - Completed
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-white mt-8">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Company</h3>
+                    <ul class="mt-2 space-y-1">
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Team</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Support</h3>
+                    <ul class="mt-2 space-y-1">
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Help Center</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Contact Us</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Legal</h3>
+                    <ul class="mt-2 space-y-1">
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Privacy</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Terms</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Follow Us</h3>
+                    <ul class="mt-2 space-y-1">
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a class="text-gray-500 hover:text-gray-900" href="#"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-4">
+                <p class="text-sm text-gray-500 text-center">© 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarTitle = document.getElementById('calendar-title');
+            const calendarDays = document.getElementById('calendar-days');
+            const todayButton = document.getElementById('today-button');
+            const prevMonthButton = document.getElementById('prev-month');
+            const nextMonthButton = document.getElementById('next-month');
+
+            let currentYear, currentMonth;
+
+            const events = {
+                '2024-03-05': 'red',
+                '2024-03-07': 'red',
+                '2024-03-01': 'blue',
+                '2024-03-02': 'green',
+            };
+
+            function generateCalendar(year, month) {
+                const firstDay = new Date(year, month).getDay();
+                const lastDate = new Date(year, month + 1, 0).getDate();
+                const prevLastDate = new Date(year, month, 0).getDate();
+                const today = new Date();
+                const days = [];
+
+                for (let i = firstDay; i > 0; i--) {
+                    days.push(`<div class="text-gray-300">${prevLastDate - i + 1}</div>`);
+                }
+
+                for (let i = 1; i <= lastDate; i++) {
+                    const isToday = today.getDate() === i && today.getMonth() === month && today.getFullYear() === year;
+                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+                    const eventColor = events[dateStr] ? events[dateStr] : '';
+                    days.push(`
+                    <div class="calendar-day ${isToday ? 'bg-gray-200' : ''}">
+                        ${i}
+                        ${eventColor ? `<span class="dot bg-${eventColor}-500"></span>` : ''}
+                    </div>
+                `);
+                }
+
+                const nextDays = 42 - days.length;
+                for (let i = 1; i <= nextDays; i++) {
+                    days.push(`<div class="text-gray-300">${i}</div>`);
+                }
+
+                calendarDays.innerHTML = days.join('');
+                calendarTitle.textContent = `${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}`;
+            }
+
+            function setToday() {
+                const today = new Date();
+                currentYear = today.getFullYear();
+                currentMonth = today.getMonth();
+                generateCalendar(currentYear, currentMonth);
+            }
+
+            function changeMonth(offset) {
+                currentMonth += offset;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                } else if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                generateCalendar(currentYear, currentMonth);
+            }
+
+            todayButton.addEventListener('click', setToday);
+            prevMonthButton.addEventListener('click', () => changeMonth(-1));
+            nextMonthButton.addEventListener('click', () => changeMonth(1));
+
+            setToday();
+        });
+    </script>
+</body>
+
+</html>

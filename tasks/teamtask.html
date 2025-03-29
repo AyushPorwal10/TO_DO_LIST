@@ -1,0 +1,286 @@
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img alt="Company Logo" class="h-8 w-8" height="32"
+                            src="/Images/logo.jpg"
+                            width="32" style="border-radius: 15px;"/>
+                    </div>
+                    <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                        <a class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/index.html">
+                            Home
+                        </a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/tasks/task.html">
+                            Task
+                        </a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/calender/calendar.html">
+                           Calender
+                        </a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/Login_sign/about.html">
+                            About
+                        </a>
+                        <a class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="/Login_sign/contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="/notification/notification.html"><i class="fas fa-bell text-gray-600 mr-4"></i></a>
+                <div class="flex items-center">
+                    <button class="ml-4 bg-indigo-600 text-white px-3 py-2 rounded-md text-sm font-medium" style="background-color: black;">
+                        <a href="/calender/assign_task.html">+ New Task</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Task Buttons -->
+        <div class="flex justify-center mb-6">
+            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-l-md">
+               <a href="/tasks/task.html">Tasks for User</a>
+            </button>
+            <button class="bg-black text-white px-4 py-2 rounded-r-md">
+                <a href="/tasks/teamtask.html">Tasks for Team</a>
+            </button>
+        </div>
+        <!-- Team Task Dependencies -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold mb-4">
+                Team Task Dependencies
+            </h2>
+            <img alt="Team Task Dependencies Chart" class="w-full" height="400"
+                src="https://storage.googleapis.com/a1aa/image/cfKm4Upqs9QAudn5dMuCQ0HlCF6RLIYb0oiHpUJRzMw.jpg"
+                width="800" />
+        </div>
+        <!-- Team Members & Tasks -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold mb-4">
+                Team Members &amp; Tasks
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                    <img alt="Sarah Johnson" class="h-12 w-12 rounded-full mr-4" height="48"
+                        src="/Images/ayush.jpg"
+                        width="48" />
+                    <div>
+                        <h3 class="text-sm font-semibold">
+                            Ayush Porwal
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Project Manager
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Project Planning
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Due: Dec 15
+                        </p>
+                        <div class="bg-gray-300 h-2 rounded-full mt-2">
+                            <div class="bg-black h-2 rounded-full w-3/4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                    <img alt="Michael Chen" class="h-12 w-12 rounded-full mr-4" height="48"
+                        src="/Images/ashutosh.jpg"
+                        width="48" />
+                    <div>
+                        <h3 class="text-sm font-semibold">
+                            Ashutosh Upadhyay
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            Lead Developer
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Backend Development
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Due: Dec 20
+                        </p>
+                        <div class="bg-gray-300 h-2 rounded-full mt-2">
+                            <div class="bg-black h-2 rounded-full w-1/2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                    <img class="h-12 w-12 rounded-full mr-4" height="48"
+                        src="/Images/aman.jpg"
+                        width="48" />
+                    <div>
+                        <h3 class="text-sm font-semibold">
+                            Aman Patel
+                        </h3>
+                        <p class="text-sm text-gray-600">
+                            UI/UX Designer
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Design System
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            Due: Dec 18
+                        </p>
+                        <div class="bg-gray-300 h-2 rounded-full mt-2">
+                            <div class="bg-black h-2 rounded-full w-2/3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Timeline -->
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-2xl font-semibold mb-6">Project Timeline</h1>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-black text-white flex items-center justify-center rounded-full">1</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Project Planning</p>
+                            <p class="text-gray-500">Completed on Dec 1</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-black text-white flex items-center justify-center rounded-full">2</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Design Phase</p>
+                            <p class="text-gray-500">In Progress - Due Dec 15</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-gray-300 text-gray-500 flex items-center justify-center rounded-full">3</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Development</p>
+                            <p class="text-gray-500">Starts Dec 16</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-gray-300 text-gray-500 flex items-center justify-center rounded-full">4</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Testing</p>
+                            <p class="text-gray-500">Starts Jan 5</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-gray-300 text-gray-500 flex items-center justify-center rounded-full">5</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Deployment</p>
+                            <p class="text-gray-500">Starts Jan 20</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="h-8 w-8 bg-gray-300 text-gray-500 flex items-center justify-center rounded-full">6</div>
+                        <div class="ml-4">
+                            <p class="font-semibold">Maintenance</p>
+                            <p class="text-gray-500">Ongoing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold mb-4">
+                        About Us
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Leading task management solution for teams of all sizes.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold mb-4">
+                        Quick Links
+                    </h3>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>
+                            <a class="hover:underline" href="#">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover:underline" href="#">
+                                Pricing
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover:underline" href="#">
+                                Resources
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold mb-4">
+                        Contact
+                    </h3>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li>
+                            <a class="hover:underline" href="mailto:ashutoshupdhyay2062@gmail.com">
+                                ashutoshupdhyay2062@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover:underline" href="tel:+91 8602141267">
+                                +91 8602141267
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold mb-4">
+                        Follow Us
+                    </h3>
+                    <div class="flex space-x-4">
+                        <a class="text-gray-400 hover:text-white" href="#">
+                            <i class="fab fa-twitter">
+                            </i>
+                        </a>
+                        <a class="text-gray-400 hover:text-white" href="#">
+                            <i class="fab fa-facebook">
+                            </i>
+                        </a>
+                        <a class="text-gray-400 hover:text-white" href="#">
+                            <i class="fab fa-github">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-400">
+                © 2025 To-Do. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

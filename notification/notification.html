@@ -1,0 +1,424 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Notifications Page
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img alt="Logo" class="h-10 w-10" height="40"
+                    src="/Images/logo.jpg"
+                    width="40" style="border-radius: 15px;"/>
+                <nav class="ml-10 space-x-4">
+                    <a class="text-gray-700 hover:text-gray-900" href="/index.html">
+                        Home
+                    </a>
+                    <a class="text-gray-700 hover:text-gray-900" href="/tasks/task.html">
+                        Tasks
+                    </a>
+                    <a class="text-gray-700 hover:text-gray-900" href="/calender/calendar.html">
+                        Calendar
+                    </a>
+                    <a class="text-gray-700 hover:text-gray-900" href="/Login_sign/about.html">
+                        About
+                    </a>
+                    <a class="text-gray-700 hover:text-gray-900" href="/Login_sign/contact.html">
+                        Contact
+                    </a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-bell"><a href="/notification/notification.html"></a>
+                    </i>
+                </button>
+                <img alt="User Avatar" class="h-10 w-10 rounded-full" height="40"
+                    src="/Images/ashutosh.jpg"
+                    width="40" />
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <ul id="notifications"></ul>
+    <main class="container mx-auto px-4 py-6">
+        <div class="flex justify-between items-center mb-4">
+            <div>
+                <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md shadow-sm">
+                    All Notifications
+                    <i class="fas fa-chevron-down ml-2">
+                    </i>
+                </button>
+            </div>
+            <div class="space-x-2">
+                <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md shadow-sm">
+                    Mark all as read
+                </button>
+                <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md shadow-sm">
+                    Clear all
+                </button>
+                <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md shadow-sm">
+                    <i class="fas fa-cog">
+                    </i>
+                    Settings
+                </button>
+            </div>
+        </div>
+        <!-- Notifications List -->
+        <div class="bg-white shadow rounded-md">
+            <div class="divide-y divide-gray-200">
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-tasks text-gray-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                New task assigned
+                            </p>
+                            <p class="text-gray-600">
+                                Sarah assigned you to review the Q4 marketing strategy document
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View task
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        2m ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                Project milestone completed
+                            </p>
+                            <p class="text-gray-600">
+                                Website redesign phase 1 has been completed and is ready for review
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View project
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        1h ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-alt text-yellow-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                Meeting reminder
+                            </p>
+                            <p class="text-gray-600">
+                                Team standup meeting in 30 minutes
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Join meeting
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        3h ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-comment-alt text-blue-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                New comment
+                            </p>
+                            <p class="text-gray-600">
+                                John commented on your recent design proposal
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View comment
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        5h ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-file-alt text-purple-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                Document updated
+                            </p>
+                            <p class="text-gray-600">
+                                Project requirements document has been updated
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View changes
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        1d ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-exclamation-circle text-red-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                Deadline approaching
+                            </p>
+                            <p class="text-gray-600">
+                                Client presentation deadline is in 2 days
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View task
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        1d ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-user-plus text-pink-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                New team member
+                            </p>
+                            <p class="text-gray-600">
+                                Emma has joined the design team
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View profile
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        2d ago
+                    </div>
+                </div>
+                <!-- Notification Item -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-flag-checkered text-green-500 text-xl mr-4">
+                        </i>
+                        <div>
+                            <p class="font-semibold text-gray-900">
+                                Project milestone
+                            </p>
+                            <p class="text-gray-600">
+                                Mobile app development phase completed
+                            </p>
+                            <div class="text-sm text-gray-500 mt-1">
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    View details
+                                </a>
+                                ·
+                                <a class="text-blue-600 hover:underline" href="#">
+                                    Mark as read
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 text-sm">
+                        2d ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Load More Button -->
+        <div class="mt-4 text-center">
+            <button class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md shadow-sm">
+                Load more notifications
+            </button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white mt-8 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img alt="Logo" class="h-10 w-10" height="40"
+                        src="/Images/logo.jpg"
+                        width="40" style="border-radius: 15px;"/>
+                    <p class="text-gray-600">
+                        Making team collaboration easier and more efficient.
+                    </p>
+                </div>
+                <div class="flex space-x-8">
+                    <div>
+                        <h3 class="font-semibold text-gray-900">
+                            Product
+                        </h3>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Features
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Integrations
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">
+                            Company
+                        </h3>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="/Login_sign/contact.html">
+                                    contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">
+                            Legal
+                        </h3>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:underline" href="#">
+                                    Security
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>
+                    © 2025 To-Do. All rights reserved.
+                </p>
+                <div class="mt-2 space-x-4">
+                    <a class="text-gray-500 hover:text-gray-700" href="#">
+                        <i class="fab fa-twitter">
+                        </i>
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-700" href="#">
+                        <i class="fab fa-pinterest">
+                        </i>
+                    </a>
+                    <a class="text-gray-500 hover:text-gray-700" href="#">
+                        <i class="fab fa-github">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const socket = io('http://localhost:5000');
+
+        socket.on('message', (msg) => {
+            console.log(msg);
+        });
+
+        socket.on('newNotification', (data) => {
+            const notificationList = document.getElementById('notifications');
+            const newNotification = document.createElement('li');
+            newNotification.textContent = data.message;
+            notificationList.appendChild(newNotification);
+        });
+    </script>
+</body>
+
+</html>

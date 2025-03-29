@@ -1,0 +1,24 @@
+{
+  "name": "aurbindo",
+  "version": "1.0.0",
+  "description": "To-Do Lists which can help to take ourself task and the teamets are assign a task to other and also see the completio of task in a time",
+  "main": "script.js",
+  "scripts": {
+    "test": "node script.js"
+  },
+  "author": "4_Errors",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^2.2.0",
+    "color": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.1",
+    "nodemailer": "^6.10.0",
+    "socket.io": "^4.8.1"
+  }
+}
